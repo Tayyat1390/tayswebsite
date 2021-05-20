@@ -1,0 +1,30 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th colspan="1">Hero Name</th>
+      <th colspan="1">Base of Operations</th>
+      <th colspan="1">Real Name</th>
+      <th colspan="1">Video</th>
+      <th colspan="1">Affiliations</th>
+      <th colspan="1">Biography</th>
+      <th colspan="1">Header Image</th>
+      <th colspan="1">Occupation</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @heros.each do |hero| %>
+      <tr>
+        <td><%= hero.name%></td>
+        <td><%= hero.baseOperations%></td>
+        <td><%= hero.realName%></td>
+        <td><%= hero.video%></td>
+        <td><%= hero.affiliations%></td>
+        <td><%= hero.bio%></td>
+        <td><%= hero.headerImg%></td>
+        <td><%= hero.occupation%></td>
+
+      </tr>
+    <% end %>
+  </tbody>
+</table>

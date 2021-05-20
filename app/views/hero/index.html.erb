@@ -1,0 +1,10 @@
+<p id="notice"><%= notice %></p>
+<% content_for :page_title,  "Index" %>
+
+<h1>Heroes</h1>
+
+<%= render '/hero/table' %>
+
+<br>
+
+<%= link_to 'New Hero', new_hero_path %>
