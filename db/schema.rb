@@ -10,17 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_05_19_230647) do
+ActiveRecord::Schema.define(version: 2021_05_21_001124) do
 
   create_table "heros", force: :cascade do |t|
-    t.string "name"
     t.binary "headerImg"
     t.text "bio"
     t.binary "video"
     t.string "realName"
     t.string "occupation"
     t.string "baseOperations"
-    t.text "affiliations"
+    t.string "affiliations"
+    t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

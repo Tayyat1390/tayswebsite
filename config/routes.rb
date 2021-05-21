@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
+  resources :heros
   resources :hero
   
-root 'hero#index'
+  root 'heros#index'
 end

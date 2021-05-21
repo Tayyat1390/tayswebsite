@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Headerimg:</strong>
+  <%= @hero.headerImg %>
+</p>
+
+<p>
+  <strong>Bio:</strong>
+  <%= @hero.bio %>
+</p>
+
+<p>
+  <strong>Video:</strong>
+  <%= @hero.video %>
+</p>
+
+<p>
+  <strong>Realname:</strong>
+  <%= @hero.realName %>
+</p>
+
+<p>
+  <strong>Occupation:</strong>
+  <%= @hero.occupation %>
+</p>
+
+<p>
+  <strong>Baseoperations:</strong>
+  <%= @hero.baseOperations %>
+</p>
+
+<p>
+  <strong>Affiliations:</strong>
+  <%= @hero.affiliations %>
+</p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @hero.name %>
+</p>
+
+<%= link_to 'Edit', edit_hero_path(@hero) %> |
+<%= link_to 'Back', heros_path %>
