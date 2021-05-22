@@ -1,19 +1,22 @@
+<body>
 <div class="container px-4" id="body-app">  
   <p id="notice"><%= notice %></p>
 
   <div class="container">
-    <h1>Heros</h1>
+    <%= image_tag "maxresdefault.gif", :class => "img-fluid ow-header" %>
   </div>
 
   <div class="container">
-    <body>
-      <%= render '/heros/table' %>
-    </body>
+    <div class="container">
+      <%= render 'heros/overview' %>
+    </div>
+    <div class="container">
+        <%= render '/heros/table' %>
+    </div>
   </div>
-
-  <br>
 
   <div class="container">
     <%= link_to 'New Hero', new_hero_path %>
   </div>
 </div>
+</body>
