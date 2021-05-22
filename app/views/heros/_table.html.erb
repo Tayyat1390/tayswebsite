@@ -1,0 +1,33 @@
+<table class="table">
+  <thead>
+    <tr>
+    <th scope="col">Hero Picture</th>
+    <th scope="col">Biography</th>
+    <th scope="col">Video</th>
+    <th scope="col">Real Name</th>
+    <th scope="col">Occupation</th>
+    <th scope="col">Base Operations</th>
+    <th scope="col">Affiliations</th>
+    <th scope="col">Name</th>
+    <th colspan="3"/>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @heros.each do |hero| %>
+      <tr>
+        <td><%= hero.headerImg %></td>
+        <td><%= hero.bio %></td>
+        <td><%= hero.video %></td>
+        <td><%= hero.realName %></td>
+        <td><%= hero.occupation %></td>
+        <td><%= hero.baseOperations %></td>
+        <td><%= hero.affiliations %></td>
+        <td><%= hero.name %></td>
+        <td><%= link_to 'Show', hero %></td>
+        <td><%= link_to 'Edit', edit_hero_path(hero) %></td>
+        <td><%= link_to 'Destroy', hero, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
