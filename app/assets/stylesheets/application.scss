@@ -18,7 +18,7 @@
  
  
   body {
-      background-color: whitesmoke;
+      background-image: radial-gradient(blue, #ffa500); 
       margin: auto;
   }
  
@@ -26,43 +26,41 @@
       color: grey;
       width: auto;
   }
+  
+.inverse-navbar   {
+  background-color: rgb(138, 131, 72);
+  color:rgb(209, 209, 209);
+  border: 1px solid #333;
+}
+
+.inverse-navbar a {
+  display: inline;
+  color: white;
+  text-align: center;
+  font-family: 'Cinzel Decorative', cursive;
+  padding: 20px;
+  font-size: 30px;
+  text-decoration: none;
+  text-align: center;
+}
+
+.inverse-navbar a:hover {
+  background-color: rgb(138, 131, 72);
+  color:#222;
+  border: 0px solid #333;
+}
  
-  .navbar {
-     min-height: 80px;
-   }
-   
-   .navbar-brand {
-     padding: 0 15px;
-     height: 80px;
-     line-height: 80px;
-   }
-   
-   .navbar-toggle {
-     /* (80px - button height 34px) / 2 = 23px */
-     margin-top: 23px;
-     padding: 9px 10px !important;
-   }
-   
-   @media (min-width: 768px) {
-     .navbar-nav > li > a {
-       /* (80px - line-height of 27px) / 2 = 26.5px */
-       padding-top: 26.5px;
-       padding-bottom: 26.5px;
-       line-height: 27px;
-     }
-   }
- 
- .header {
-     position: absolute;
-     top: 0%;
-     width: 100%;
-     height: 120px; //footer = 100, topmenu = 50
-     max-width: 100%;
-     min-height: auto;
-     text-align: center;
-     color: #fff; 
+.header {
+  border-bottom: 1px solid;
+  top: 0%;
+  width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 100%;
+  min-height: auto;
+  text-align: center;
+
  }
- 
+
  .footer {
      position: absolute;
      width: 100%;
@@ -91,3 +89,93 @@
      margin: 4px 2px;
      cursor: pointer;
    }
+.aside {
+  grid-area: aside;
+  border-right: 1px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #405275;
+  color: white;
+  text-align: justified;
+}
+.aside p {
+  margin: 20px;
+  font-size: 24px;
+  font-family: 'Laila', serif;
+  line-height: 1.5;
+}
+.aside h2 {
+  font-family: 'Bungee Inline', cursive;
+  font-size: 28px;
+  text-align: center;
+  font-weight: 800;
+  color: white;
+}
+.content {
+  grid-area: content;
+  border: 1px solid;
+  background-color: #D3D3D3;
+}
+.content h2 {
+  font-family: 'Cinzel Decorative', cursive;
+  text-align: center;
+  font-size: 40px;
+}
+
+.footer {
+  grid-area: footer;
+  border: 1px solid;
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  padding: 50px;
+  background-color: 	#218ffe;
+  color: white;
+}
+
+img {
+  width: 100%;
+  
+}
+.form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+  display: block;
+}
+.form h3 {
+  text-align: center;
+  font-size: 30px;
+  font-family: 'Bungee Inline', cursive;
+}
+.form {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  margin-top: 5px;
+  width: 100%;
+  font-weight: 700;
+  font-size: 20px;
+  font-family: 'Laila', serif;
+}
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+
+}
+
+.heroes-body {
+  border: 1px solid;
+  background-color:#D3D3D3;
+}
+.heroes-body p {
+  
+}
+.heroes-body h2 {
+  font-family: 'Cinzel Decorative', cursive;
+}
+.name {
+  font-family:'Courier New', Courier, monospace;
+}
