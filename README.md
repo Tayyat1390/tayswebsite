@@ -13,6 +13,7 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+* rake db:create
 
 * Database initialization
 
