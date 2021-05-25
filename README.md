@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/Tayyat1390/tayswebsite.svg?branch=main)](https://travis-ci.com/Tayyat1390/tayswebsite)
+
 # README
 
 This README would normally document whatever steps are necessary to get the
