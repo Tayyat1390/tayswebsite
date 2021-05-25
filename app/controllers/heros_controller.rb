@@ -5,11 +5,12 @@ class HerosController < ApplicationController
   
   # GET /heros or /heros.json
   def index
-    @heros = Hero.all
+    @heros = Hero.all.with_attached_image
   end
 
   # GET /heros/1 or /heros/1.json
   def show
+    @hero = Hero.find(params[:id])
   end
 
   # GET /heros/new
@@ -24,6 +25,7 @@ class HerosController < ApplicationController
   # POST /heros or /heros.json
   def create
     @hero = Hero.new(hero_params)
+    @hero.image.attach(params[:hero][:image])
 
     respond_to do |format|
       if @hero.save
