@@ -1,6 +1,8 @@
 class HerosController < ApplicationController
   before_action :set_hero, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_admin!, only: [:create, :update, :destroy]
+  # before_action :is_authorised, only: [:update, :destroy]
+  
   # GET /heros or /heros.json
   def index
     @heros = Hero.all
@@ -66,4 +68,8 @@ class HerosController < ApplicationController
     def hero_params
       params.require(:hero).permit(:headerImg, :bio, :video, :realName, :occupation, :baseOperations, :affiliations, :name)
     end
+
+    # def is_authorised
+    #   redirect_to root_path, alert: "You don't have permission to modify this asset." unless current_project_user.email == @project.user
+    # end
 end
