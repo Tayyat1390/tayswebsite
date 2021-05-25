@@ -14,7 +14,7 @@
   </thead>
 
   <tbody>
-    <% @heros.each do |hero| %>
+    <% @heros.order(:release).each do |hero| %>
       <tr>
         <td><%= hero.image %></td>
         <td><%= hero.bio %></td>
