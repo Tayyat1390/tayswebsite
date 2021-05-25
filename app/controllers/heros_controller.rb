@@ -1,13 +1,16 @@
 class HerosController < ApplicationController
   before_action :set_hero, only: %i[ show edit update destroy ]
-
+  before_action :authenticate_admin!, only: [:create, :update, :destroy]
+  # before_action :is_authorised, only: [:update, :destroy]
+  
   # GET /heros or /heros.json
   def index
-    @heros = Hero.all
+    @heros = Hero.all.with_attached_image
   end
 
   # GET /heros/1 or /heros/1.json
   def show
+    @hero = Hero.find(params[:id])
   end
 
   # GET /heros/new
@@ -22,6 +25,7 @@ class HerosController < ApplicationController
   # POST /heros or /heros.json
   def create
     @hero = Hero.new(hero_params)
+    @hero.image.attach(params[:hero][:image])
 
     respond_to do |format|
       if @hero.save
@@ -64,6 +68,10 @@ class HerosController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def hero_params
-      params.require(:hero).permit(:headerImg, :bio, :video, :realName, :occupation, :baseOperations, :affiliations, :name)
+      params.require(:hero).permit(:image, :bio, :video, :realName, :occupation, :baseOperations, :affiliations, :name, :release)
     end
+
+    # def is_authorised
+    #   redirect_to root_path, alert: "You don't have permission to modify this asset." unless current_project_user.email == @project.user
+    # end
 end
