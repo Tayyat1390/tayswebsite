@@ -3,6 +3,17 @@
 </h2>
 
 <ul>
+    <% if @hero.image.attached? %>
+        <p>
+            <%= image_tag @hero.image %>
+        </p>
+    <% end %>
+    
+    <li>
+        <strong>Realname:</strong>
+        <%= @hero.realName %>
+    </li>
+
     <li>
         <strong>Realname:</strong>
         <%= @hero.realName %>
