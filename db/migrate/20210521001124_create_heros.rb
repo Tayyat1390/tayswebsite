@@ -9,6 +9,8 @@ class CreateHeros < ActiveRecord::Migration[5.2]
       t.string :affiliations
       t.string :name
 
+      t.datetime :release
+
       t.timestamps
     end
   end
