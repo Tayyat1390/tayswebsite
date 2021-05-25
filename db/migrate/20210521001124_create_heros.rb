@@ -3,7 +3,7 @@ class CreateHeros < ActiveRecord::Migration[5.2]
     create_table :heros do |t|
       t.binary :headerImg
       t.text :bio
-      t.binary :video
+      t.string :video
       t.string :realName
       t.string :occupation
       t.string :baseOperations
